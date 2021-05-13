@@ -3,6 +3,7 @@
   });
  */
 
+  // Esta función sirve para opacar el backgrond del navbar
   var lastScrollTop = 0;
 $(window).scroll(function(event){
    var st = $(this).scrollTop();
@@ -14,4 +15,10 @@ $(window).scroll(function(event){
       $("#navbar").removeClass( "bg-dark" ).addClass( "bg-transparent" );
    }
    lastScrollTop = st;
+});
+
+
+$("#btn-comenzar").click(function(){
+    $("#pre-formulario").removeClass( "d-flex" ).addClass( "d-none" );
+    $("#formulario").removeClass( "d-none" ).addClass( "d-flex" );
 });
